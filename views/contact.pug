@@ -1,0 +1,45 @@
+//- contact.pug : contact page
+//- My Portfolio , Japkaran Singh
+extends layout 
+block content
+
+ section
+   .container
+     .row
+       .col-md-12
+         h1 Contact Form
+     .row
+ 
+       .col-md-6.mt-3
+         p
+           | I am from Amritsar Punjab currently living in Barrie Ontario
+         .find-widget
+           | Address: 
+           a(href='#') 43 Davies crescent Barrie, L4M 2M4
+         .find-widget
+           | Phone:  
+           a(href='#') +1 (647)-405-4452
+ 
+       .col-md-6
+         form(action='mailto:japkaransingh2@gmail.com')
+           .form-group
+             label(for='name') Name
+             input.form-control(type='text' name='name' required='' )
+             
+           .form-group
+             label(for='email') Email
+             input.form-control(type='email' name='email' required='' )
+             
+           .form-group
+             label Subject
+             input.form-control(type='text' name='subject' required='')
+             
+           .form-group
+             label(for='message') Message
+             textarea#message.form-control(rows='3' name='message' required='')
+             
+ 
+           .form-submit.mt-5
+             button.btn.btn-danger(type='submit')
+               i.material-icons.mdi.mdi-message-outline
+               |  Send Message
